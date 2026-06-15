@@ -1,0 +1,227 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Order - Brewnova Cafe{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <h1 class="page-title">Place Your Order</h1>
+    <p class="page-subtitle">We deliver happiness in every sip, right to your doorstep!</p>
+</section>
+
+<section class="order-section">
+    <div class="container">
+        <form method="post" class="order-form" id="orderForm">
+            {% csrf_token %}
+            <div class="form-section">
+                <h3><i class="fas fa-user"></i> Customer Details</h3>
+                <p class="section-description">Please provide your contact information for delivery</p>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="customer_name">Full Name *</label>
+                        <input type="text" id="customer_name" name="customer_name" required placeholder="Enter your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="customer_phone">Phone Number *</label>
+                        <input type="tel" id="customer_phone" name="customer_phone" required placeholder="+971 50 123 4567">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="customer_address">Delivery Address *</label>
+                    <textarea id="customer_address" name="customer_address" rows="3" required placeholder="Enter your complete delivery address, building name, area, Abu Dhabi"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="special_instructions">Special Instructions (Optional)</label>
+                    <textarea id="special_instructions" name="special_instructions" rows="2" placeholder="Any special requests, delivery notes, or dietary preferences..."></textarea>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3><i class="fas fa-coffee"></i> Select Your Items</h3>
+                <p class="section-description">Choose from our signature drinks and fresh bites</p>
+
+                <div class="menu-selection" id="coffee-selection">
+                    <h4><i class="fas fa-mug-hot"></i> Coffee Collection</h4>
+                    <div class="selection-items" id="coffee-items">
+                        <div class="selection-row">
+                            <select class="item-select" data-category="coffee">
+                                <option value="">Select Coffee</option>
+                                <option value="blood-coffee" data-price="18">Blood Coffee — AED 18</option>
+                                <option value="brewnova-royale" data-price="20">Brewnova Royale — AED 20</option>
+                                <option value="filter-reimagined" data-price="15">Filter Reimagined — AED 15</option>
+                                <option value="espresso" data-price="9">Espresso — AED 9</option>
+                                <option value="americano" data-price="12">Americano — AED 12</option>
+                                <option value="cappuccino" data-price="14">Cappuccino — AED 14</option>
+                                <option value="latte" data-price="15">Latte — AED 15</option>
+                                <option value="mocha" data-price="16">Mocha — AED 16</option>
+                            </select>
+                            <input type="number" class="qty-input" min="1" value="1" placeholder="Qty">
+                            <button type="button" class="btn-add-item" data-category="coffee"><i class="fas fa-plus"></i> Add</button>
+                        </div>
+                    </div>
+                    <div class="added-items" id="coffee-added-items"></div>
+                    <div class="category-total"><span>Coffee Total: <span id="coffee_subtotal">AED 0</span></span></div>
+                </div>
+
+                <div class="menu-selection" id="tea-selection">
+                    <h4><i class="fas fa-leaf"></i> Tea Collection</h4>
+                    <div class="selection-items" id="tea-items">
+                        <div class="selection-row">
+                            <select class="item-select" data-category="tea">
+                                <option value="">Select Tea</option>
+                                <option value="masala-chai" data-price="9">Masala Chai — AED 9</option>
+                                <option value="elaichi-chai" data-price="10">Elaichi Chai — AED 10</option>
+                                <option value="green-tea" data-price="10">Green Tea — AED 10</option>
+                                <option value="kashmiri-kahwa" data-price="12">Kashmiri Kahwa — AED 12</option>
+                                <option value="hibiscus-tea" data-price="13">Hibiscus Tea — AED 13</option>
+                            </select>
+                            <input type="number" class="qty-input" min="1" value="1" placeholder="Qty">
+                            <button type="button" class="btn-add-item" data-category="tea"><i class="fas fa-plus"></i> Add</button>
+                        </div>
+                    </div>
+                    <div class="added-items" id="tea-added-items"></div>
+                    <div class="category-total"><span>Tea Total: <span id="tea_subtotal">AED 0</span></span></div>
+                </div>
+
+                <div class="menu-selection" id="shake-selection">
+                    <h4><i class="fas fa-glass-whiskey"></i> Shakes & Coolers</h4>
+                    <div class="selection-items" id="shake-items">
+                        <div class="selection-row">
+                            <select class="item-select" data-category="shake">
+                                <option value="">Select Shake/Cooler</option>
+                                <option value="rose-falooda" data-price="18">Rose Falooda — AED 18</option>
+                                <option value="mango-tango" data-price="17">Mango Tango — AED 17</option>
+                                <option value="choco-frappe" data-price="16">Choco Frappe — AED 16</option>
+                                <option value="classic-cold-coffee" data-price="14">Classic Cold Coffee — AED 14</option>
+                                <option value="strawberry-shake" data-price="15">Strawberry Shake — AED 15</option>
+                            </select>
+                            <input type="number" class="qty-input" min="1" value="1" placeholder="Qty">
+                            <button type="button" class="btn-add-item" data-category="shake"><i class="fas fa-plus"></i> Add</button>
+                        </div>
+                    </div>
+                    <div class="added-items" id="shake-added-items"></div>
+                    <div class="category-total"><span>Shakes Total: <span id="shake_subtotal">AED 0</span></span></div>
+                </div>
+
+                <div class="menu-selection" id="snack-selection">
+                    <h4><i class="fas fa-bread-slice"></i> Bites & Bakes</h4>
+                    <div class="selection-items" id="snack-items">
+                        <div class="selection-row">
+                            <select class="item-select" data-category="snack">
+                                <option value="">Select Snack</option>
+                                <option value="lava-cake" data-price="11">Chocolate Lava Cake — AED 11</option>
+                                <option value="banana-loaf" data-price="10">Banana Walnut Loaf — AED 10</option>
+                                <option value="choco-chip" data-price="10">Chocolate Chip Cookie — AED 10</option>
+                                <option value="cheese-toast" data-price="9">Cheese Toast — AED 9</option>
+                                <option value="paneer-roll" data-price="12">Paneer Roll — AED 12</option>
+                                <option value="brownie" data-price="13">Brownie — AED 13</option>
+                            </select>
+                            <input type="number" class="qty-input" min="1" value="1" placeholder="Qty">
+                            <button type="button" class="btn-add-item" data-category="snack"><i class="fas fa-plus"></i> Add</button>
+                        </div>
+                    </div>
+                    <div class="added-items" id="snack-added-items"></div>
+                    <div class="category-total"><span>Snacks Total: <span id="snack_subtotal">AED 0</span></span></div>
+                </div>
+            </div>
+
+            <div class="order-summary">
+                <h3><i class="fas fa-receipt"></i> Order Summary</h3>
+                <div class="summary-content" id="orderSummary">
+                    <p class="empty-order">No items selected</p>
+                </div>
+                <div class="pricing-breakdown">
+                    <div class="price-row"><span>Subtotal:</span><span id="subtotalAmount">AED 0</span></div>
+                    <div class="price-row"><span>Delivery Fee:</span><span id="deliveryFee">AED 5</span></div>
+                    <div class="price-row"><span>VAT (5%):</span><span id="gstAmount">AED 0</span></div>
+                    <div class="total-row"><span><strong>Total Amount:</strong></span><span id="totalAmount"><strong>AED 5</strong></span></div>
+                </div>
+                <div class="delivery-note">
+                    <i class="fas fa-info-circle"></i>
+                    <small>Free delivery on orders above AED 100. Estimated delivery time: 30-45 minutes</small>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3><i class="fas fa-credit-card"></i> Payment Method</h3>
+                <p class="section-description">Choose your preferred payment option</p>
+                <div class="payment-options">
+                    <label class="payment-option">
+                        <input type="radio" name="payment_method" value="Card" checked>
+                        <span class="payment-label">
+                            <i class="fas fa-credit-card"></i>
+                            <div><strong>Credit/Debit Card</strong><small>Visa, Mastercard, AMEX</small></div>
+                        </span>
+                    </label>
+                    <label class="payment-option">
+                        <input type="radio" name="payment_method" value="Cash">
+                        <span class="payment-label">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <div><strong>Cash on Delivery</strong><small>Pay when your order arrives</small></div>
+                        </span>
+                    </label>
+                    <label class="payment-option">
+                        <input type="radio" name="payment_method" value="Apple Pay">
+                        <span class="payment-label">
+                            <i class="fab fa-apple"></i>
+                            <div><strong>Apple Pay</strong><small>Fast and secure payment</small></div>
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3><i class="fas fa-cog"></i> Order Preferences</h3>
+                <div class="preferences-grid">
+                    <div class="preference-item">
+                        <label><input type="checkbox" name="eco_packaging" value="yes"><span class="checkmark"></span>Use eco-friendly packaging</label>
+                    </div>
+                    <div class="preference-item">
+                        <label><input type="checkbox" name="cutlery_needed" value="yes" checked><span class="checkmark"></span>Include cutlery and napkins</label>
+                    </div>
+                    <div class="preference-item">
+                        <label><input type="checkbox" name="contact_on_arrival" value="yes" checked><span class="checkmark"></span>Call before delivery</label>
+                    </div>
+                    <div class="preference-item">
+                        <label><input type="checkbox" name="newsletter_signup" value="yes"><span class="checkmark"></span>Subscribe to offers & updates</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary btn-large" id="confirmOrderBtn" disabled>
+                    <i class="fas fa-check-circle"></i> Place Order
+                </button><br>
+                <p class="order-note">
+                    <i class="fas fa-shield-alt"></i>
+                    Your order information is secure and encrypted. We'll send confirmation via SMS.
+                </p>
+            </div>
+        </form>
+    </div>
+</section>
+
+<section class="why-order-online">
+    <div class="container">
+        <h2 class="section-title">Why Order Online?</h2>
+        <div class="features-grid">
+            <div class="feature-item fade-in"><i class="fas fa-clock"></i><h4>Save Time</h4><p>Skip the queue and order from anywhere. Your coffee will be ready when you arrive or delivered fresh.</p></div>
+            <div class="feature-item fade-in"><i class="fas fa-mobile-alt"></i><h4>Easy Ordering</h4><p>User-friendly interface makes ordering quick and simple.</p></div>
+            <div class="feature-item fade-in"><i class="fas fa-truck"></i><h4>Fast Delivery</h4><p>Fresh coffee and snacks delivered to your doorstep in 30-45 minutes.</p></div>
+            <div class="feature-item fade-in"><i class="fas fa-tags"></i><h4>Exclusive Offers</h4><p>Get access to online-only discounts, combo deals, and loyalty rewards.</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="order-faq">
+    <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-grid">
+            <div class="faq-item fade-in"><h4>What is the minimum order amount?</h4><p>There's no minimum order amount. However, orders above AED 100 qualify for free delivery.</p></div>
+            <div class="faq-item fade-in"><h4>How long does delivery take?</h4><p>Most orders are delivered within 30-45 minutes.</p></div>
+            <div class="faq-item fade-in"><h4>Can I modify my order after placing it?</h4><p>Yes, within 5 minutes by calling us at +971 50 123 4567.</p></div>
+            <div class="faq-item fade-in"><h4>Do you offer contactless delivery?</h4><p>Yes! Select contactless delivery during checkout and we'll leave your order at your doorstep safely.</p></div>
+        </div>
+    </div>
+</section>
+{% endblock %}

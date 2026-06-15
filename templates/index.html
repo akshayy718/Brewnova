@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home - Brewnova Cafe{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content-wrapper">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-image">
+                    <h1 class="hero-title">Welcome to Brewnova</h1>
+                    <img src="{% static 'images/Latte-recipe.jpg' %}" alt="Brewnova Logo" class="hero-img">
+                </div>
+                <p class="page-subtitle">Brewed with passion & Served with love</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features">
+    <div class="container">
+        <h2 class="section-title">Why Choose Brewnova?</h2>
+        <div class="features-grid">
+            <div class="feature-card fade-in">
+                <div class="feature-icon">
+                    <i class="fas fa-coffee"></i>
+                </div>
+                <h3>Premium Quality</h3>
+                <p>Sourced from the finest coffee plantations, each bean is carefully selected for exceptional flavor and aroma.</p>
+            </div>
+            <div class="feature-card fade-in">
+                <div class="feature-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3>Artisan Brewing</h3>
+                <p>Our skilled baristas craft each cup with passion and precision, creating unforgettable experiences with every sip.</p>
+            </div>
+            <div class="feature-card fade-in">
+                <div class="feature-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <h3>Cozy Atmosphere</h3>
+                <p>Relax in our warm, inviting space designed for connection, creativity, and comfort in the heart of Abu Dhabi.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Signature Drinks Preview -->
+<section class="signature-preview">
+    <div class="container">
+        <h2 class="section-title">Our Recommendations</h2>
+        <div class="signature-grid">
+            <div class="signature-card fade-in">
+                <img src="{% static 'images/SS.png' %}" alt="Blood Coffee">
+                <div class="signature-info">
+                    <h3>Signature Specials</h3>
+                    <p>Blood Coffee</p>
+                    <p>Our bold signature blend with dark cherry notes and intense espresso</p>
+                    <span class="price">AED 18</span>
+                </div>
+            </div>
+            <div class="signature-card fade-in">
+                <img src="{% static 'images/goldflake.png' %}" alt="Brewnova Royale">
+                <div class="signature-info">
+                    <h3>Coffee Classics</h3>
+                    <p>Brewnova Royale</p>
+                    <p>Luxurious espresso with saffron milk and delicate gold flakes</p>
+                    <span class="price">AED 20</span>
+                </div>
+            </div>
+            <div class="signature-card fade-in">
+                <img src="{% static 'images/Tea.png' %}" alt="Tea and Tisanes">
+                <div class="signature-info">
+                    <h3>Tea & Tisanes</h3>
+                    <p>Kashmiri Kahwa</p>
+                    <p>Saffron and almond infused traditional Kashmiri tea</p>
+                    <span class="price">AED 12</span>
+                </div>
+            </div>
+            <div class="signature-card fade-in">
+                <img src="{% static 'images/Cool.png' %}" alt="Coolers and Shakes">
+                <div class="signature-info">
+                    <h3>Coolers & Shakes</h3>
+                    <p>Choco Frappe</p>
+                    <p>Rich chocolate blended drink with ice and cream</p>
+                    <span class="price">AED 16</span>
+                </div>
+            </div>
+            <div class="signature-card fade-in">
+                <img src="{% static 'images/bites.png' %}" alt="Bites and Bakes">
+                <div class="signature-info">
+                    <h3>Bites & Bakes</h3>
+                    <p>Banana Walnut Loaf</p>
+                    <p>Moist banana bread studded with crunchy walnuts</p>
+                    <span class="price">AED 10</span>
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <a href="{% url 'menu' %}" class="btn btn-secondary">View Full Menu</a>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Preview -->
+<section class="testimonials-preview">
+    <div class="container">
+        <h2 class="section-title">What Our Guests Say</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card fade-in">
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p>"The Blood Coffee is intense and unforgettable — a must-try!"</p>
+                <div class="author">— Arya Iyer</div>
+            </div>
+            <div class="testimonial-card fade-in">
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p>"Loved the ambiance and the Brewnova Royale felt luxurious!"</p>
+                <div class="author">— Rakesh Nambiar</div>
+            </div>
+            <div class="testimonial-card fade-in">
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                </div>
+                <p>"Perfect place to unwind with great coffee and banana loaf."</p>
+                <div class="author">— Leena Suresh</div>
+            </div>
+        </div>
+        <div class="text-center">
+            <a href="{% url 'blogs' %}" class="btn btn-secondary">Read All Reviews</a>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta">
+    <div class="cta-content">
+        <h2>Ready to Experience Brewnova?</h2>
+        <p>Order now and taste the difference in every sip. Premium coffee and treats delivered across Abu Dhabi.</p>
+        <a href="{% url 'orders' %}" class="btn btn-primary">Order Now</a>
+    </div>
+</section>
+{% endblock %}
