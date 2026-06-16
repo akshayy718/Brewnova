@@ -19,7 +19,7 @@
 
 [<img src="https://img.shields.io/badge/▶%20%20LIVE%20WEBSITE-akshay718.pythonanywhere.com-E94560?style=for-the-badge&labelColor=0A0A18" height="35"/>](https://akshay718.pythonanywhere.com)
 &nbsp;&nbsp;
-[<img src="https://img.shields.io/badge/▶%20%20DEMO%20VIDEO-Watch%20Walkthrough-16213E?style=for-the-badge&labelColor=0A0A18&logo=googledrive&logoColor=E94560" height="35"/>](#)
+[<img src="https://img.shields.io/badge/▶%20%20DEMO%20VIDEO-Watch%20Walkthrough-16213E?style=for-the-badge&labelColor=0A0A18&logo=googledrive&logoColor=E94560" height="35"/>](https://drive.google.com/file/d/1oscpLaeHALSRTYQPnyXWFAlQk9K1nxEc/view?usp=sharing)
 
 <br/>
 
@@ -48,6 +48,10 @@
 A production-grade café website deployed live, featuring five fully designed pages — Home, Menu, About, Blog, and Order — with a custom dark color palette, SVG branding, scroll animations, and UAE-localized content including AED pricing and regional payment options.
 
 **Not a template.** Every color, every card, every menu item was hand-crafted.
+
+> 🌐 **Live Website:** [akshay718.pythonanywhere.com](https://akshay718.pythonanywhere.com)
+>
+> 🎥 **Demo Video:** [Watch Full Walkthrough on Google Drive](https://drive.google.com/file/d/1oscpLaeHALSRTYQPnyXWFAlQk9K1nxEc/view?usp=sharing)
 
 <br/>
 
