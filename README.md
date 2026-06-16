@@ -19,8 +19,8 @@
 
 [<img src="https://img.shields.io/badge/▶%20%20LIVE%20WEBSITE-akshay718.pythonanywhere.com-E94560?style=for-the-badge&labelColor=0A0A18" height="35"/>](https://akshay718.pythonanywhere.com)
 &nbsp;&nbsp;
-[<img src="https://img.shields.io/badge/▶%20%20DEMO%20VIDEO-Watch%20Walkthrough-16213E?style=for-the-badge&labelColor=0A0A18&logo=googledrive&logoColor=E94560" height="35"/>](https://drive.google.com/file/d/1oscpLaeHALSRTYQPnyXWFAlQk9K1nxEc/view?usp=sharing)
-
+[<img src="https://img.shields.io/badge/▶%20%20DEMO%20VIDEO-Watch%20Walkthrough-16213E?style=for-the-badge&labelColor=0A0A18&logo=googledrive&logoColor=E94560" height="35"/>]
+(https://drive.google.com/file/d/1gRLtzsqXTPJpjHwagpUS5L9IwiUb3Dje/view?usp=drive_link)
 <br/>
 
 <img src="https://img.shields.io/badge/django-6.0.6-E94560?style=flat&labelColor=0D0D1A&logo=django&logoColor=E94560" />
