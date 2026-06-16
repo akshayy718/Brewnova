@@ -1,111 +1,48 @@
-<div align="center">
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0,6B3A2A,C4843A,F5C97A&height=200&section=header&text=Brewnova%20Café&fontSize=55&fontColor=fff&animation=fadeIn&fontAlignY=36&desc=A%20Heritage%20Café%20Web%20Experience%20%7C%20Django%20%7C%20Full%20Stack&descAlignY=58&descSize=16" width="100%"/>
-</div>
+# ☕ Brewnova Cafe
 
-<div align="center">
+A fully responsive, dark-themed cafe website built with **Django**, featuring a curated menu, online ordering, blog reviews, and a custom brand identity. Designed with a **Midnight Espresso** color palette and deployed live on **PythonAnywhere**.
 
-[![Demo Video](https://img.shields.io/badge/🎥_Demo_Video-Watch_Here-C4843A?style=for-the-badge&logo=youtube&logoColor=white)](#-demo-video)
-[![GitHub](https://img.shields.io/badge/GitHub-ananthavishnu--kg-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ananthavishnu-kg)
-
-</div>
-
-<div align="center">
-
-![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=flat-square&logo=python&logoColor=white)
-![Django](https://img.shields.io/badge/Django-Web%20Framework-092E20?style=flat-square&logo=django&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
-
-</div>
+🔗 **Live Demo:** [akshay718.pythonanywhere.com](https://akshay718.pythonanywhere.com)
 
 ---
 
-## 📌 Overview
+## 🖥️ Screenshots
 
-**Brewnova Café** is a full-stack café website built with **Django**, offering a rich heritage-themed experience. Visitors can explore the menu, place orders, read café blogs, and learn about the story behind Brewnova — all through a beautifully designed, responsive web interface.
-
-> ☕ *"Where every cup tells a story."*
-
----
-
-## 🎥 Demo Video
-
-<div align="center">
-
-| 🎬 Screen Recording | Description |
-|---|---|
-| [▶️ Click here to watch the demo](#) | Full walkthrough of the Brewnova Café website |
-
-> 📌 *Replace the `#` above with your actual screen recording link (YouTube / Loom)*
-
-</div>
+| Page | Description |
+|------|-------------|
+| **Home** | Hero section with signature coffee previews, testimonials, and CTA |
+| **Menu** | 30+ items across 5 categories in responsive 3-column grid cards |
+| **About** | Brand story, team section, awards, and visit info |
+| **Blogs** | Customer reviews with star ratings and review submission form |
+| **Order** | Dynamic order form with item selection, quantity, VAT calculation, and payment options |
 
 ---
 
-## ✨ Features
+## 🎨 Theme — Midnight Espresso
 
-| Feature | Description |
-|---------|-------------|
-| 🏠 **Home Page** | Hero section with café highlights and atmosphere |
-| 📋 **Menu Page** | Full café menu with drinks, food, and specials |
-| 🛒 **Orders Page** | Online order placement for customers |
-| 📝 **Blog Page** | Café stories, recipes, and latest updates |
-| ℹ️ **About Page** | The heritage story behind Brewnova Café |
-| 📱 **Responsive Design** | Fully optimized for mobile, tablet, and desktop |
-| 🎨 **Heritage Theme** | Elegant brown and gold café aesthetic |
+| Element | Color |
+|---------|-------|
+| Background | `#0D0D1A` — Deep dark navy |
+| Navbar / Footer | `#0A0A18` — Near-black |
+| Cards | `#16213E` — Dark navy |
+| Accent | `#E94560` — Red-pink |
+| Text | `#F5F5F5` / `#EDEDED` — Light cream |
 
----
-
-## 🏗️ Architecture
-
-```
-┌──────────────────────────────────────────────────────┐
-│                  Brewnova Café App                   │
-│                                                       │
-│  ┌─────────────────────────────────────────────────┐ │
-│  │              Frontend (Browser)                  │ │
-│  │   HTML5 Templates   CSS3 Styles   JavaScript    │ │
-│  └──────────────────────┬──────────────────────────┘ │
-│                         │                             │
-│                         ▼                             │
-│  ┌─────────────────────────────────────────────────┐ │
-│  │           Django Backend (Python)                │ │
-│  │                                                  │ │
-│  │   urls.py → views.py → templates/               │ │
-│  │                                                  │ │
-│  │   /         → index.html   (Home)               │ │
-│  │   /menu     → menu.html    (Menu)               │ │
-│  │   /orders   → orders.html  (Orders)             │ │
-│  │   /blogs    → blogs.html   (Blog)               │ │
-│  │   /about    → about.html   (About)              │ │
-│  └──────────────────────┬──────────────────────────┘ │
-│                         │                             │
-│                         ▼                             │
-│  ┌─────────────────────────────────────────────────┐ │
-│  │              SQLite Database                     │ │
-│  │              db.sqlite3                          │ │
-│  └─────────────────────────────────────────────────┘ │
-└──────────────────────────────────────────────────────┘
-```
+Custom SVG logo with coffee cup, steam lines, and brand typography.
 
 ---
 
 ## 🛠️ Tech Stack
 
-<div align="center">
-
-| Layer | Technology | Purpose |
-|-------|-----------|---------|
-| **Backend** | Python + Django | Web framework, routing, views |
-| **Frontend** | HTML5 + CSS3 | Page structure and styling |
-| **Interactivity** | JavaScript | Animations and dynamic features |
-| **Database** | SQLite | Data storage |
-| **Templates** | Django Template Engine | Dynamic HTML rendering |
-| **Static Files** | Django Static Files | Images, CSS, JS serving |
-
-</div>
+| Layer | Technology |
+|-------|-----------|
+| **Backend** | Python · Django 6.0.6 |
+| **Frontend** | HTML5 · CSS3 · JavaScript |
+| **Styling** | Custom CSS with CSS Variables · CSS Grid · Flexbox |
+| **Fonts** | Playfair Display (headings) · Poppins (body) |
+| **Icons** | Font Awesome 6 |
+| **Deployment** | PythonAnywhere (WSGI · Static Files) |
+| **Version Control** | Git · GitHub |
 
 ---
 
@@ -113,111 +50,88 @@
 
 ```
 Brewnova/
-│
-├── 📁 cafe/                  → Django project settings
-│   ├── settings.py           → App configuration
-│   ├── urls.py               → URL routing
-│   └── wsgi.py               → WSGI entry point
-│
-├── 📁 templates/             → HTML page templates
-│   ├── base.html             → Base layout (navbar, footer)
-│   ├── index.html            → Home page
-│   ├── menu.html             → Menu page
-│   ├── orders.html           → Orders page
-│   ├── blogs.html            → Blog page
-│   └── about.html            → About page
-│
-├── 📁 static/                → Static assets
-│   ├── 📁 images/            → Café photos and graphics
-│   └── 📁 js/
-│       └── script.js         → JavaScript interactions
-│
-├── 📄 manage.py              → Django management CLI
-└── 📄 db.sqlite3             → SQLite database
+├── Brewnova/                # Django app (views, urls, models)
+│   ├── views.py
+│   ├── urls.py
+│   └── models.py
+├── Brewnova_project/        # Django project settings
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── templates/               # HTML templates
+│   ├── base.html
+│   ├── index.html
+│   ├── menu.html
+│   ├── about.html
+│   ├── blogs.html
+│   └── orders.html
+├── static/
+│   ├── css/style.css        # Midnight Espresso theme
+│   ├── js/script.js         # Order form logic, animations
+│   └── images/              # Menu item photos, logo
+├── manage.py
+└── requirements.txt
 ```
 
 ---
 
-## 📸 Pages Overview
+## ✨ Features
 
-<div align="center">
-
-| Page | Route | Description |
-|------|-------|-------------|
-| 🏠 Home | `/` | Welcome page with café highlights |
-| 📋 Menu | `/menu` | Full menu with drinks and food |
-| 🛒 Orders | `/orders` | Place your order online |
-| 📝 Blogs | `/blogs` | Read café stories and recipes |
-| ℹ️ About | `/about` | Learn about Brewnova Café |
-
-</div>
+- **Responsive Design** — Works on desktop, tablet, and mobile
+- **Dark Theme** — Custom Midnight Espresso color palette with red-pink accents
+- **Menu System** — 30+ items across 5 categories (Signature Specials, Coffee Classics, Tea & Tisanes, Coolers & Shakes, Bites & Bakes)
+- **Online Ordering** — Dynamic order form with item selection, quantity controls, subtotal, VAT (5%), and delivery fee calculation
+- **Blog & Reviews** — Customer review cards with star ratings and review submission form
+- **Custom Logo** — SVG coffee cup logo designed to match the brand theme
+- **Scroll Animations** — Fade-in effects on menu cards and sections
+- **UAE Context** — AED pricing, Abu Dhabi address, local phone number, Card/Apple Pay/Cash payment options
 
 ---
 
-## ⚡ Quick Start
+## 🚀 Getting Started
 
 ### Prerequisites
-- Python 3.x installed
-- pip package manager
+- Python 3.12+
+- pip
 
-### Setup
+### Installation
 
 ```bash
-# Clone the repository
-git clone https://github.com/ananthavishnu-kg/Brewnova.git
+git clone https://github.com/akshayy718/Brewnova.git
 cd Brewnova
-
-# Create and activate virtual environment
-python -m venv djvenv
-djvenv\Scripts\activate        # On Windows
-source djvenv/bin/activate     # On Mac/Linux
-
-# Install Django
-pip install django
-
-# Navigate to project folder
-cd cafe
-
-# Run migrations
+python -m venv venv
+source venv/bin/activate        # Linux/Mac
+venv\Scripts\activate           # Windows
+pip install -r requirements.txt
 python manage.py migrate
-
-# Start the development server
 python manage.py runserver
 ```
 
-Open your browser and go to:
-```
-http://127.0.0.1:8000
-```
+Open **http://127.0.0.1:8000/** in your browser.
 
 ---
 
-## 🔮 Future Improvements
+## 🌐 Deployment (PythonAnywhere)
 
-- [ ] **User Authentication** — Customer login and signup
-- [ ] **Payment Integration** — Online payment for orders
-- [ ] **Admin Dashboard** — Manage menu items and orders
-- [ ] **Email Notifications** — Order confirmation emails
-- [ ] **Deploy to Cloud** — Host on Railway or Render
-
----
-
-## 👨‍💻 Developer
-
-<div align="center">
-
-**Ananthavishnu KG** — Full Stack Web Developer
-
-[![GitHub](https://img.shields.io/badge/GitHub-ananthavishnu--kg-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ananthavishnu-kg)
-
-</div>
+1. Clone repo on PythonAnywhere
+2. Create virtualenv with Python 3.13
+3. Install dependencies from `requirements.txt`
+4. Run `python manage.py collectstatic`
+5. Configure WSGI file with `Brewnova_project.settings`
+6. Set static files path: `/static/` → `staticfiles/`
+7. Reload web app
 
 ---
 
-<div align="center">
+## 📄 License
 
-*Built with ❤️ using Django · Python · HTML · CSS · JavaScript*
+This project is for educational and portfolio purposes.
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0,F5C97A,C4843A,6B3A2A&height=130&section=footer&animation=fadeIn" width="100%"/>
+---
 
-</div>
+## 👤 Author
+
+**Akshay Santhosh**
+- GitHub: [@akshayy718](https://github.com/akshayy718)
+- LinkedIn: [Akshay Santhosh](https://www.linkedin.com/in/akshay-santhosh-435499208)
+- Email: akshaysanthosh718@gmail.com
