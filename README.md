@@ -6,7 +6,7 @@
 
 <br/><br/>
 
-# `B R E W N O V A'`
+# `B R E W N O V A`
 
 ### ━━━ *Café & Roastery* ━━━
 
@@ -19,7 +19,7 @@
 
 [<img src="https://img.shields.io/badge/▶%20%20LIVE%20WEBSITE-akshay718.pythonanywhere.com-E94560?style=for-the-badge&labelColor=0A0A18" height="35"/>](https://akshay718.pythonanywhere.com)
 &nbsp;&nbsp;
-[<img src="https://img.shields.io/badge/▶%20%20DEMO%20VIDEO-Watch%20Walkthrough-16213E?style=for-the-badge&labelColor=0A0A18&logo=googledrive&logoColor=E94560" height="35"/>](https://drive.google.com/file/d/1gRLtzsqXTPJpjHwagpUS5L9IwiUb3Dje/view?usp=drive_link)
+[<img src="https://img.shields.io/badge/▶%20%20DEMO%20VIDEO-Watch%20Walkthrough-16213E?style=for-the-badge&labelColor=0A0A18&logo=googledrive&logoColor=E94560" height="35"/>](https://drive.google.com/file/d/1EpDA0cIfhxJYgcSYAXD-cgwG8eiVdQ-W/view?usp=sharing)
 
 <br/>
 
@@ -51,7 +51,7 @@ A production-grade café website deployed live, featuring five fully designed pa
 
 > 🌐 **Live Website:** [akshay718.pythonanywhere.com](https://akshay718.pythonanywhere.com)
 >
-> 🎥 **Demo Video:** [Watch Full Walkthrough on Google Drive](https://drive.google.com/file/d/1gRLtzsqXTPJpjHwagpUS5L9IwiUb3Dje/view?usp=drive_link)
+> 🎥 **Demo Video:** [Watch Full Walkthrough on Google Drive](https://drive.google.com/file/d/1EpDA0cIfhxJYgcSYAXD-cgwG8eiVdQ-W/view?usp=sharing)
 
 <br/>
 
